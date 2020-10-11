@@ -15,6 +15,7 @@ body {
 
 .container .overlay {
   position: absolute;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   left: 0;
   right: 0;
@@ -35,7 +36,7 @@ body {
 .container .overlay .wrapper .start-quiz {
   display: flex;
   align-items: center;
-  margin: 35px auto 0;
+  margin: 35px auto 20px;
   color: #ffffff;
   background-color: dodgerblue;
   padding: 11px 25px;
@@ -130,7 +131,7 @@ body {
 
 .container .overlay .wrapper .question-card .question {
   font-size: 19px;
-  margin: 22px 25px;
+  margin: 22px 15px;
   line-height: 1.5;
 }
 
@@ -190,6 +191,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .container .overlay .wrapper {
+    margin-top: 30px;
+  }
+
   .container .overlay .wrapper .question-card .question {
     line-height: 1.5;
     font-size: 18px;
