@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: url('./assets/images/quizBG.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+}
+
+.container .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .overlay .wrapper {
+  margin-top: 50px;
+}
+
+.container .overlay .wrapper .title {
+  font-size: 55px;
+  text-transform: uppercase;
+}
+.container .overlay .wrapper .start-quiz {
+  display: flex;
+  align-items: center;
+  margin: 35px auto 0;
+  color: #ffffff;
+  background-color: dodgerblue;
+  padding: 11px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container .overlay .wrapper .start-quiz img {
+  margin-right: 11px;
+  width: 30px;
+}
+
+.container .overlay .wrapper .start-quiz:hover {
+  background-color: #3e9ffe;
+}
+
+.container .overlay .wrapper .score {
+  font-size: 21px;
+}
+.container .overlay .wrapper .results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin: 30px auto;
+  text-align: center;
+  background: rgba(124, 124, 124, 0.57);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.container .overlay .wrapper .results .score,
+.container .overlay .wrapper .results .correct-answer,
+.container .overlay .wrapper .results .wrong-answer {
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.container .overlay .wrapper .next-question {
+  cursor: pointer;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px auto;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.container .overlay .wrapper .next-question:hover {
+  background-color: rgba(225, 225, 225, 0.77);
+}
+
+.container .overlay .wrapper .question-card {
+  margin: auto;
+  width: 40%;
+  background: rgba(124, 124, 124, 0.57);
+  padding: 5px 0 20px;
+  border-radius: 5px;
+}
+
+.container .overlay .wrapper .question-card .answers button {
+  padding: 15px;
+  width: 92%;
+  background-color: dodgerblue;
+  color: #fff;
+  border: none;
+  margin: 6px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+}
+
+.container .overlay .wrapper .question-card .total-questions {
+  font-size: 17px;
+  margin: 22px auto;
+}
+
+.container .overlay .wrapper .question-card .question {
+  font-size: 19px;
+  margin: 22px 25px;
+  line-height: 1.5;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* media query */
+@media only screen and (max-width: 900px) {
+  .container .overlay .wrapper .title {
+    font-size: 35px;
+  }
+  .container .overlay .wrapper .question-card {
+    width: 80%;
+  }
+
+  .container .overlay .wrapper .results {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container .overlay .wrapper .question-card .question {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+
+  .container .overlay .wrapper .question-card {
+    width: 97%;
+  }
+
+  .container .overlay .wrapper .results {
+    width: 90%;
+  }
+}
