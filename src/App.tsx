@@ -125,9 +125,7 @@ function App() {
               </div>
               <div>
                 <p className='score'>
-                  <span>
-                    {score} {''}
-                  </span>
+                  <span style={{ marginRight: 5 }}>{score}</span>
                   {score >= 5 ? (
                     <span role='img' aria-label='heart face'>
                       😍

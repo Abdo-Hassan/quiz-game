@@ -76,6 +76,10 @@ body {
   border-radius: 5px;
 }
 
+.container .overlay .wrapper .results .score {
+  display: flex;
+}
+
 .container .overlay .wrapper .results .score,
 .container .overlay .wrapper .results .correct-answer,
 .container .overlay .wrapper .results .wrong-answer {
